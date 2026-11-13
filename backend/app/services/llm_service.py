@@ -71,7 +71,7 @@ def generate_answer(question: str, chunks, previous_messages=None):
         else ""
     )
 
-    prompt = f"""You are ASTRA, a grounded document intelligence assistant.
+    prompt = f"""You are Retrieva, a grounded document intelligence assistant.
 
 Answer ONLY from the provided document evidence.
 
@@ -122,7 +122,7 @@ def compare_documents(document1_name, document2_name, chunks1, chunks2):
         max_chars=max_chars_per_document
     )
 
-    prompt = f"""You are ASTRA INTEL, a grounded document comparison system.
+    prompt = f"""You are Retrieva, a grounded document comparison system.
 
 Compare the two documents using ONLY the evidence provided.
 

@@ -1,14 +1,14 @@
-# ASTRA INTEL
+# RETRIEVA
 
 ### AI-Powered Defence Document Intelligence System
 
-ASTRA INTEL is a document intelligence platform for analysing technical and defence documents. Users can upload PDFs, including scanned PDFs, ask grounded questions, generate summaries, compare documents, and inspect the evidence supporting an answer.
+RETRIEVA is a document intelligence platform for analysing technical and defence documents. Users can upload PDFs, including scanned PDFs, ask grounded questions, generate summaries, compare documents, and inspect the evidence supporting an answer.
 
 The system combines OCR, semantic search, Retrieval-Augmented Generation (RAG), dynamic query decomposition, Cross-Encoder reranking, and evidence verification to produce traceable document-grounded responses.
 
 ---
 
-## What ASTRA Does
+## What RETRIEVA Does
 
 - PDF ingestion and page-aware text extraction
 - OCR fallback for scanned PDFs
@@ -88,7 +88,7 @@ Grounded Answer / Abstention
 
 ### Retrieval Process
 
-For a simple question, ASTRA can use the original question as the retrieval query.
+For a simple question, RETRIEVA can use the original question as the retrieval query.
 
 For complex questions, the system dynamically generates independent retrieval queries.
 
@@ -104,7 +104,7 @@ This avoids relying on hardcoded document-specific entities.
 
 ### Vector Retrieval
 
-ASTRA uses:
+RETRIEVA uses:
 
 ```text
 sentence-transformers/all-MiniLM-L6-v2
@@ -142,7 +142,7 @@ This provides an additional relevance-selection stage after vector similarity se
 
 ## Grounded Question Answering
 
-ASTRA generates answers using the retrieved document evidence.
+RETRIEVA generates answers using the retrieved document evidence.
 
 The answer-generation system is instructed to:
 
@@ -161,7 +161,7 @@ For example, a comparison question involving multiple UGVs is expected to addres
 
 ## Evidence Verification
 
-ASTRA does not stop after generating an answer.
+RETRIEVA does not stop after generating an answer.
 
 For each question, the system:
 
@@ -193,7 +193,7 @@ Evidence coverage represents the proportion of factual claims that are supported
 
 ### Abstention
 
-If the requested information is not supported by the available evidence, ASTRA can abstain rather than inventing an answer.
+If the requested information is not supported by the available evidence, RETRIEVA can abstain rather than inventing an answer.
 
 Example:
 
@@ -278,7 +278,7 @@ This distinction prevents a correct "information not supported" response from be
 ## Project Structure
 
 ```text
-ASTRA-INTEL/
+RETRIEVA/
 ├── backend/
 │   ├── app/
 │   │   ├── models/
@@ -346,7 +346,7 @@ FastAPI's generated Swagger documentation will be available through the running 
 
 ## OCR
 
-ASTRA uses Tesseract as a fallback when a PDF page contains little or no extractable text.
+RETRIEVA uses Tesseract as a fallback when a PDF page contains little or no extractable text.
 
 This allows the ingestion pipeline to process both:
 
@@ -391,7 +391,7 @@ This allows retrieved evidence to be traced back to its source page.
 
 ## Conversation System
 
-ASTRA supports persistent conversations.
+RETRIEVA supports persistent conversations.
 
 The `/ask` endpoint can use previous conversation messages as additional conversational context while still grounding the current answer in retrieved document evidence.
 
@@ -411,7 +411,7 @@ GET /conversations/{conversation_id}
 
 ## Document Summarization
 
-ASTRA can generate a summary for an uploaded document through:
+RETRIEVA can generate a summary for an uploaded document through:
 
 ```text
 POST /documents/{document_id}/summary
@@ -423,7 +423,7 @@ The document's stored chunks are retrieved in page order and supplied to the lan
 
 ## Document Comparison
 
-ASTRA supports comparison between two uploaded documents.
+RETRIEVA supports comparison between two uploaded documents.
 
 ```text
 POST /documents/compare
@@ -459,7 +459,7 @@ If credentials have ever been exposed publicly, rotate them before making the re
 
 ## Attribution & Credits
 
-ASTRA INTEL uses third-party open-source software, models, and services. Their respective licenses and model terms remain applicable.
+RETRIEVA uses third-party open-source software, models, and services. Their respective licenses and model terms remain applicable.
 
 ### Libraries and Infrastructure
 
@@ -492,7 +492,7 @@ The project author made the architecture and implementation decisions, integrate
 
 ## Responsible Use
 
-ASTRA INTEL is a document-grounded information system.
+RETRIEVA is a document-grounded information system.
 
 Generated answers should be checked against the cited source material, especially when documents contain:
 
@@ -502,7 +502,7 @@ Generated answers should be checked against the cited source material, especiall
 - OCR errors
 - Conflicting information
 
-ASTRA's verification system is designed to improve traceability and reduce unsupported responses, but evidence should still be reviewed when accuracy is critical.
+RETRIEVA's verification system is designed to improve traceability and reduce unsupported responses, but evidence should still be reviewed when accuracy is critical.
 
 ---
 

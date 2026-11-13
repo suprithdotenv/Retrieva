@@ -40,7 +40,7 @@ class CompareRequest(BaseModel):
 
 @app.get("/")
 def root():
-    return {"message": "ASTRA INTEL API is running"}
+    return {"message": "Retrieva API is running"}
 
 
 @app.get("/test-db")

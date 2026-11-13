@@ -154,11 +154,11 @@ export default function Chat() {
           </div>
         ) : messages.length === 0 ? (
           <div className="empty-chat">
-            <img src="/astra-logo.svg" alt="" />
-            <h2>What can ASTRA find?</h2>
+            <img src="/retrieva-logo.svg" alt="" />
+            <h2>What can Retrieva find?</h2>
             <p>
               Ask a question about one document, name a document in your
-              question, or ask ASTRA to connect evidence across your library.
+              question, or ask Retrieva to connect evidence across your library.
             </p>
           </div>
         ) : (
@@ -223,7 +223,7 @@ export default function Chat() {
             value={question}
             onChange={(event) => setQuestion(event.target.value)}
             onKeyDown={handleKeyDown}
-            placeholder="Ask ASTRA about your documents..."
+            placeholder="Ask Retrieva about your documents..."
             rows={1}
             disabled={asking || attaching}
           />

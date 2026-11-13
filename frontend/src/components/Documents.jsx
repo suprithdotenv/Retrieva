@@ -77,7 +77,7 @@ export default function Documents({ onBack }) {
         <div className="eyebrow">DOCUMENT LIBRARY</div>
         <h1>Your documents</h1>
         <p>
-          Every indexed PDF is available to ASTRA's retrieval system.
+          Every indexed PDF is available to Retrieva's retrieval system.
         </p>
       </div>
 

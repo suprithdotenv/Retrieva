@@ -65,10 +65,10 @@ export default function UploadPanel() {
   return (
     <section className="upload-panel">
       <div className="upload-copy">
-        <div className="eyebrow">ASTRA INTEL</div>
+        <div className="eyebrow">RETRIEVA</div>
         <h1>Ask your documents.</h1>
         <p>
-          Upload one or more PDFs. ASTRA can answer from a specific document
+          Upload one or more PDFs. Retrieva can answer from a specific document
           or synthesize evidence across the entire library.
         </p>
       </div>

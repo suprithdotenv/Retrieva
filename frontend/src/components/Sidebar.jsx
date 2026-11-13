@@ -7,7 +7,7 @@ export default function Sidebar({ page, setPage, onNewConversation }) {
   return (
     <aside className="sidebar">
       <div className="sidebar-brand">
-        <img src="/astra-logo.svg" alt="ASTRA" />
+        <img src="/retrieva-logo.svg" alt="Retrieva" />
       </div>
 
       <button className="new-chat-button" onClick={onNewConversation}>
@@ -63,7 +63,7 @@ export default function Sidebar({ page, setPage, onNewConversation }) {
       </div>
 
       <div className="sidebar-footer">
-        <strong>ASTRA INTEL</strong>
+        <strong>Retrieva</strong>
         <span>Document intelligence</span>
       </div>
     </aside>

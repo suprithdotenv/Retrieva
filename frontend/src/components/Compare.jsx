@@ -42,7 +42,7 @@ export default function Compare({ onBack }) {
         <div className="eyebrow">DOCUMENT COMPARISON</div>
         <h1>Compare documents</h1>
         <p>
-          Select two indexed PDFs and ask ASTRA to identify similarities,
+          Select two indexed PDFs and ask Retrieva to identify similarities,
           differences, and information unique to each document.
         </p>
       </div>

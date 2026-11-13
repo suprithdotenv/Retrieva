@@ -8,7 +8,7 @@ async function request(path, options = {}) {
     response = await fetch(`${API_BASE}${path}`, options)
   } catch {
     throw new Error(
-      `Cannot connect to ASTRA API at ${API_BASE}. Make sure FastAPI is running.`
+      `Cannot connect to Retrieva API at ${API_BASE}. Make sure FastAPI is running.`
     )
   }
 
